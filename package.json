@@ -1,0 +1,36 @@
+{
+  "name": "hhd-webpack02",
+  "version": "1.0.0",
+  "description": "reactjs, webpack, es6",
+  "main": "index.js",
+  "scripts": {
+    "env:dev": "babel-node build/dev.js"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Dai.Le",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "component-webpack-plugin": "^0.2.1",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.1.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "express": "^4.14.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.1"
+  }
+}
