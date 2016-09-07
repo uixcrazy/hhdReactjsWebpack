@@ -12,6 +12,10 @@
   ],
   "author": "Dai.Le",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uixcrazy/hhdReactjsWebpack.git"
+  },
   "dependencies": {
     "react": "^15.2.1"
   },

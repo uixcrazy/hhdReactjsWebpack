@@ -85,7 +85,7 @@ router.get('/demo', (req, res) => {
 });
 
 server.use(router);
-server.listen(devPort, "dai.local.vt", () => {
+server.listen(devPort, "localhost", () => {
   console.log('Server start on port: ${devPort}');
 });
 // server.close();

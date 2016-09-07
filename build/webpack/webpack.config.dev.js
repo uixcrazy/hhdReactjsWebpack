@@ -10,7 +10,7 @@ export default {
   },
   output: {
     path: path.join(__dirname, '../../dist'),
-    publicPath: `http://dai.local.vt:${devPort}/assets/`,
+    publicPath: `http://localhost:${devPort}/assets/`,
     filename: '[name].js',
   },
   module: {
