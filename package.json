@@ -17,6 +17,7 @@
     "url": "https://github.com/uixcrazy/hhdReactjsWebpack.git"
   },
   "dependencies": {
+    "es6-promise": "^3.2.1",
     "react": "^15.2.1"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "eslint-plugin-react": "^5.2.2",
     "express": "^4.14.0",
     "style-loader": "^0.13.1",
+    "twig": "^0.9.5",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",

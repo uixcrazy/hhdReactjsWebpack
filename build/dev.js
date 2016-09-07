@@ -7,7 +7,9 @@
 
 import webpack from 'webpack';
 import express from 'express';
+import Twig from 'twig';
 import path from 'path';
+import fs from 'fs';
 import WebpackDevServer from 'webpack-dev-server';
 import config from './webpack/webpack.config.dev';
 
@@ -82,6 +84,16 @@ router.get('/demo', (req, res) => {
   //   // cdn_host: CDN_HOST,
   //   use_deployed_version: useDeployedVersion,
   // }));
+});
+
+router.get('/hhd/:page_type', (req, res) => {
+  // noCachedResult(res);
+  const useDeployedVersion = req.query.uselive;
+  const template = Twig.twig({ data: fs.readFileSync(path.join(__dirname, '../demo/hhd.twig'), 'utf-8') });
+  res.send(template.render({
+    page_type: req.params.page_type,
+    use_deployed_version: useDeployedVersion,
+  }));
 });
 
 server.use(router);
