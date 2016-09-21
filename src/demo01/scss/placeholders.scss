@@ -1,0 +1,66 @@
+%img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+%clearfix {
+  clear: both;
+}
+%floatleft {
+  float: left;
+}
+%floatright {
+  float: right;
+}
+%row2percent {
+  // tương đương .container-fluid trong bootstrap
+  margin: 0 2%;
+  width: 96%;
+  position: relative;
+}
+/*layout*/
+%col-50 {
+  @include col(.5,769);
+}
+%col-70 {
+  @include col(.7,769);
+}
+%col-30 {
+  @include col(.3,769);
+}
+%col-t-33 {
+  @include col(.3333333333,480);
+  @media (max-width:480px) {
+    float: left;
+    width: percentage(.5);
+    position: relative;
+  }
+}
+%user-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  // Introduced in IE 10.
+  // See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  -ms-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+}
+%flexbox-center-center {
+  display: -webkit-box;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

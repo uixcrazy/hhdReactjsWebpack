@@ -1,0 +1,27 @@
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+// For selecting text on the page
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select; // IE10+
+          user-select: $select;
+}
+// grid system
+@mixin col($width,$media-width) {
+  @media (min-width:$media-width+px) {
+    float: left;
+    width: percentage($width);
+    position: relative;
+  }
+}

@@ -25,7 +25,14 @@ export default {
       //   },
       // },
       // { test: /\.less$/, loader: 'style!css?sourceMap!less?sourceMap', },
-      { test: /\.css$/, loader: 'style!css?sourceMap' },
+      {
+        test: /\.css$/,
+        loader: 'style!css?sourceMap'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
       {
         test: /\.(png|jpg|svg|gif|eot|woff|ttf)$/,
         loader: 'file-loader',
