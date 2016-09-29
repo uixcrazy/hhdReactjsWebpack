@@ -77,19 +77,21 @@ const server = new WebpackDevServer(compiler, {
 router.get('/demo', (req, res) => {
   res.send('Hello World!');
 });
-
-router.get('/hhd/:page_type', (req, res) => {
-  // noCachedResult(res);
-  const useDeployedVersion = req.query.uselive;
-  const template = Twig.twig({ data: fs.readFileSync(path.join(__dirname, '../demo/hhd.twig'), 'utf-8') });
-  res.send(template.render({
-    page_type: req.params.page_type,
-    use_deployed_version: useDeployedVersion,
-  }));
-});
+/*
+ * config Twig file
+ */
+// router.get('/hhd/:page_type', (req, res) => {
+//   // noCachedResult(res);
+//   const useDeployedVersion = req.query.uselive;
+//   const template = Twig.twig({ data: fs.readFileSync(path.join(__dirname, '../demo/hhd.twig'), 'utf-8') });
+//   res.send(template.render({
+//     page_type: req.params.page_type,
+//     use_deployed_version: useDeployedVersion,
+//   }));
+// });
 
 router.get('/demo01', function(req, res) {
-  res.sendFile(path.join(__dirname, '../demo/demo01.html'), 'utf-8');
+  res.sendFile(path.join(__dirname, '../src/demo01/index.html'), 'utf-8');
 });
 
 server.use(router);
